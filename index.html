@@ -1,65 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food-panda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body class="archivo-narrow-font">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="archivo-narrow-font">
     <header>
-        <!-- header section -->
-         <nav>
-            <img src="assets/ic-rider-icon.svg" alt="">
-            <button>Sign up to be a restaurant partner</button>
-            <button >Log in</button>
-            <button >Sign up for a bussiness account</button>
-         </nav>
-         <nav>
-            <i style="color: #000000;"></i>
-            <div><img class="image-logo" src="assets/logo-foodpanda.avif" alt=""></div>
-            <div>
-                <button>Log in</button>
-                <button>Sign up for free delivary</button>
-                <select name="language" id="">
-                    <option value="">EN</option>
-                    <option value="">বাংলা</option>
-                </select>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-         </nav>
-         <section>
-            <div>
-                <div><img src="assets/home_img_left_foodpanda (1).webp" alt=""></div>
-                <div>
-                    <h1>Sign up for free delivery on your first order</h1>
-                    <div>
-                        <input type="text" placeholder="Enter your address">
-                        <ahref="#"><i class="fa-solid fa-location-crosshairs"></i> Locate me</a>
-                        <button>Find food</button>
-                    </div>
-                    <a href="#">Log in to see saved address</a>
-                </div>
-                <div><img src="assets/home_img_right_foodpanda.webp" alt=""></div>
+      <!-- header section -->
+      <nav
+        class="bg-[#E21B70] h-17 w-full flex justify-center gap-x-5 py-2 px-1 relative"
+      >
+        <img
+          class="hidden md:block invert-100 me-20"
+          src="assets/ic-rider-icon.svg"
+          alt=""
+        />
+        <button
+          class="border border-solid border-white px-2 py-1 rounded-md text-white font-[600]"
+        >
+          Sign up to be a restaurant partner
+        </button>
+        <!-- <button >Log in</button> -->
+        <button
+          class="w-30% border border-solid border-white px-3 py-1 rounded-md text-white font-[600]"
+        >
+          Sign up for a bussiness account
+        </button>
+        <i class=" fa-solid fa-xmark absolute  right-8 top-7 text-gray-300"></i>
+      </nav>
+      <nav class="flex items-center justify-between px-8 h-16">
+        <img
+          class="lg:hidden w-[40px] h-[45px] p-3 grayscale-100"
+          src="assets/contact.png"
+          alt=""
+        />
+        <div><img class="h-30" src="assets/logo-foodpanda.avif" alt="" /></div>
+        <div class="nav-2-right hidden lg:block">
+          <button
+            class="bg-white border-solid border-[1px] border-black px-5 py-1.5 rounded-lg"
+          >
+            Log in
+          </button>
+          <button class="bg-[#E21B70] mx-6 px-6 py-1.5 rounded-lg text-white">
+            Sign up for free delivary
+          </button>
+          <label for="select"><i class="fa-solid fa-globe"></i></label>
+          <select class="me-6" name="language" id="">
+            <option class="px-4 py-2" value="">EN</option>
+            <option class="px-4 py-2" value="">বাংলা</option>
+          </select>
+          <i
+            class="fa-solid fa-cart-shopping text-gray-500 rounded-[50%] bg-gray-200 p-3.5"
+          ></i>
+        </div>
+        <div class="lg:hidden">
+          <i
+            class="fa-solid fa-cart-shopping text-gray-500 rounded-[50%] bg-gray-200 p-3.5"
+          ></i>
+        </div>
+      </nav>
 
+      <section>
+        <div
+          class="banner-lg hidden md:flex justify-between items-center h-[406px] bg-[#f4f5f5] box-border"
+        >
+          <div class="hidden lg:block left w-[26%] h-full">
+            <img
+              class="h-full w-full"
+              src="assets/home_img_left_foodpanda (1).webp"
+              alt=""
+            />
+          </div>
+          <div class="input w-[65%] lg:w-[48%] px-6">
+            <h1 class="text-5xl inline-block font-bold">
+              Sign up for free delivery on your first order
+            </h1>
+            <div
+              class="search h-[90px] p-3 my-6 rounded-[16px] relative shadow-[0px_0px_24px_0px_#00000029] bg-white flex justify-between items-center gap-[2%]"
+            >
+              <input
+                class="w-[78%] p-5 border-[#2e3138] border-[1px] border-solid rounded-xl"
+                type="text"
+                placeholder="Enter your address"
+              />
+              <p class="absolute right-[150px]">
+                <i class="fa-solid fa-location-crosshairs"></i> Locate me
+              </p>
+              <button
+                class="w-[20%] bg-[#E21B70] py-5 px-7 text-white rounded-xl"
+              >
+                Find food
+              </button>
             </div>
-         </section>
-         <section>
-            <h1 >Sign up for free delivery on your first order</h1>
-            <img src="assets/home_img_right_foodpanda.webp" alt="">
+            <a class="text-xl underline" href="#"
+              >Log in to see saved addresses</a
+            >
+          </div>
+          <div class="right w-[26%] h-full">
+            <img
+              class="h-full w-full"
+              src="assets/home_img_right_foodpanda.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
 
-            </div>
-         </section>
+      <section class="md:hidden">
+        <div class="banner flex items-center justify-between bg-[#f4f5f5] px-6">
+          <div>
+            <h2 class="text-2xl font-[700] text-[#2e2131]">
+              Sign up for free delivery on your first order
+            </h2>
+          </div>
+          <div class="basis-[0.75]">
+            <img
+              class="h-full w-[200px]"
+              src="assets/home_img_right_foodpanda.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="input px-5 sm:flex gap-4 items-center justify-between">
+          <div class="search h-12 relative sm:w-full">
+            <input
+              class="h-full w-full border-[1px] rounded-[12px] focus:placeholder: ffff border-[#2e3138] py-2 px-5"
+              type="text"
+              placeholder="Enter your address"
+            />
+            <p class="absolute right-4 top-3.5">
+              <i class="fa-solid fa-location-crosshairs"></i> Locate me
+            </p>
+          </div>
+          <button
+            class="bg-[#E21B70] text-white text-[18px] h-12 my-4 m block w-full rounded-[12px] font-bold sm:w-[180px]"
+          >
+            Find food
+          </button>
+        </div>
+        <a class="text-[18px] ms-6 underline" href=""
+          >Log in to see saved address</a
+        >
+      </section>
     </header>
     <main>
-        <!-- main section -->
+      <!-- main section from here -->
+      <section class="m-6">
+        <h1 class="text-2xl lg:text-4xl font-bold my-7 text-center">
+          Daily deals on foodpanda
+        </h1>
+        <div
+          class="card-container overflow-x-scroll grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 gap-y-5"
+        >
+          <div
+            class="card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+          <div
+            class="card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+          <div
+            class="card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+          <div
+            class="card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+          <div
+            class="card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+          <div
+            class="lg:hidden card border-[0.66667px] relative border-[#e8e9ea] rounded-2xl"
+          >
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[3px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> Tk.120 off Tk. 599
+            </p>
+            <p
+              class="bg-[#E21B70] rounded-md my-[5px] absolute left-4 text-white px-3 py-1 top-[45px]"
+            >
+              <i class="fa-solid fa-compact-disc"></i> 30% off Tk. 50
+            </p>
+            <img
+              class="rounded-tl-2xl rounded-tr-2xl"
+              src="assets/food-1.jpeg"
+              alt=""
+            />
+            <div class="ms-4 mb-3 text-[#7b8084] relative">
+              <h2 class="text-[#2e3138] text-2xl font-bold my-2">Food first</h2>
+              <p class="absolute bottom-15 right-5 text-[#2e3138]">
+                <i class="fa-solid fa-star text-yellow-500"></i> 4.9
+              </p>
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 120
+              </p>
+              <p class="inline-block ms-3 font-[600]">•Snacks</p>
+              <br />
+              <p class="inline-block font-[600]">
+                <i class="fa-solid fa-clock"></i> 30-45 min
+              </p>
+
+              <p class="inline-block ms-2 font-[600]">
+                •<i class="fa-solid fa-person-biking"></i> Tk.64
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-6 relative " >
+        <h1 class="text-4xl font-bold me-8 ms-3 mb-5">You prepare the food, we handle the rest</h1>
+        <div class="image-vendor h-[340px] md:h-[500px] lg:h-[600px] w-full">
+          <img class="h-[100%] w-[100%]" src="assets/home-vendor-bd.webp" alt="">
+        </div>
+        <div class="w-[80%] lg:w-[60%]  absolute top-[100%] left-[50%]  translate-[-50%] bg-white p-6 shadow-[0px_0px_24px_0_#00000039] rounded-2xl">
+          <h2>List your restaurant or shop on foodpanda</h2>
+         <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we! <br>
+        It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat! <br>
+        Interested? Let's start our partnership today!</p>
+        <button class="bg-[#E21B70] px-6 py-4 rounded-xl text-white my-4">Get started</button>
+        </div>
+      </section>
+
+      <section class="px-5 mt-48">
+        <h1 class="text-4xl my-5 ms-3 me-5 font-bold">Find us in these cities and many more!</h1>
+        <div class="card-container rounded-xl  grid grid-cols-2 gap-4 gap-y-6 ">
+          <div class="card relative h-[160px] rounded-2xl">
+            <img class="h-full w-full rounded-2xl shadow-[0px_0px_24px_0_#00000039]" src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-5 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+          <div class="card relative h-[160px]">
+            <img src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-8 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+          <div class="card relative h-[160px]">
+            <img src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-8 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+          <div class="card relative h-[160px]">
+            <img src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-8 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+          <div class="card relative h-[160px]">
+            <img src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-8 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+          <div class="card relative h-[160px]">
+            <img src="assets/dhaka.jpg" alt="">
+            <button class="absolute left-5 bottom-8 bg-white text-black px-10 py-3 rounded-xl">Dhaka</button>
+          </div>
+
+        </div>
+      </section>
     </main>
+
     <footer>
-        <!-- footer section -->
+      <!-- footer section -->
     </footer>
-    <script src="https://kit.fontawesome.com/256c63fa14.js" crossorigin="anonymous"></script>
-</body>
+
+    <script
+      src="https://kit.fontawesome.com/256c63fa14.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
